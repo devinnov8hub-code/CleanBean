@@ -23,11 +23,9 @@ import { ImageZoom, ScrollReveal } from "./components/motionEffects";
 import DotMatrix from "@/components/ui/dot-matrix";
 import LogoCarousel from "./components/logoCarousel";
 import CurrentYear from "@/components/CurrentYear";
+import Logo from "../app/assets/Brand_logo_1.png";
+import Logo2 from "../app/assets/Brand_logo_1.png";
 
-/* ========================================================================
-   CONTENT
-   All copy, icons and images live here. Edit text in this block only.
-   ======================================================================== */
 
 const hero = {
   titleStart: "Clean",
@@ -155,8 +153,7 @@ const audience = {
 };
 
 const footer = {
-  logoMark: "L",
-  logoText: "Logo",
+  logoMark: Logo,
   description:
     "A pressure boiler and wet mechanical dehuller for African locust bean seeds, built for women-led groups, cooperatives and small-scale processors of iru and dawadawa.",
   navTitle: "Explore",
@@ -187,13 +184,13 @@ export default function Home() {
             className="absolute inset-0"
             background="transparent"
             color="#86c9a1"
-            activeColor="#16a34a"
+            activeColor="#0D4B3B"
             restOpacity={0.38}
           />
           <ScrollReveal className="relative z-10 mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center gap-6 px-2 text-center sm:gap-8 sm:px-6 lg:gap-10 lg:px-8">
             <h1 className="font-hero text-balance text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl lg:text-7xl">
               {hero.titleStart}
-              <span className="text-green-600">{hero.titleAccent}</span>
+              <span className="text-brand-primary">{hero.titleAccent}</span>
             </h1>
       
             <ImageZoom className="w-full max-w-4xl">
@@ -405,11 +402,16 @@ export default function Home() {
             {/* Brand */}
             <div>
               <a href="#home" className="inline-flex items-center gap-2">
-                <span className="grid h-9 w-9 place-items-center rounded-lg bg-white font-bold text-primary">
-                  {footer.logoMark}
-                </span>
-                <span className="text-lg font-semibold">{footer.logoText}</span>
+               <div className="border rounded-2xl h-35 bg-white">
+                 <Image
+                    src={Logo2}
+                    width={150}
+                    alt="clean bean logo"
+                    className="max-h-full max-w-full object-contain"
+                  />
+               </div>
               </a>
+              
               <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/80">
                 {footer.description}
               </p>

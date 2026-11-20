@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Logo from "../assets/Brand_logo_1.png";
+import Logo2 from "../assets/Brand_logo_2.png";
+import Image from "next/image";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -26,7 +29,11 @@ export default function Navbar() {
           href="/"
           className="rounded-sm text-lg font-semibold text-primary transition-colors hover:text-secondary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
         >
-          CleanBean
+         <Image
+         src={Logo2}
+         width={250}
+         alt="Logo of clean bean"
+         />
         </a>
 
         <ul className="hidden items-center gap-6 md:flex lg:gap-8">
