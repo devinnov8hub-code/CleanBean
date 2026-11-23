@@ -405,7 +405,7 @@ export default function Home() {
         </ScrollReveal>
       </section>
 
-      {/**TEAM DETAILS */}
+      {/**TEAM DETAIL */}
       <section id="clean-bean-team" className=" py-16 sm:py-24 bg-secondary">
        
         <ScrollReveal className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
