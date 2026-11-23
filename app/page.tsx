@@ -25,6 +25,7 @@ import LogoCarousel from "./components/logoCarousel";
 import CurrentYear from "@/components/CurrentYear";
 import Logo from "../app/assets/Brand_logo_1.png";
 import Logo2 from "../app/assets/Brand_logo_1.png";
+import teamImg from '../app/assets/Team_Image.jpg';
 
 
 const hero = {
@@ -149,6 +150,15 @@ const audience = {
       title: "Small-scale commercial processors",
       body: "Process 5–10 kg batches of iru and dawadawa feedstock without a full-size industrial line.",
     },
+  ],
+};
+
+//Team details
+const teamDetails = {
+  title: "Meet the CleanBean team.",
+ paragraphs: [
+    "The Clean Bean team set out to make locust bean seed preparation easier for iru and dawadawa producers. Their Locust Bean Dehuller Cum Boiler combines pressure boiling and wet mechanical dehulling in one batch machine.",
+    "The team envisions women-led groups, cooperatives and small-scale processors spending less time and effort on boiling and manual dehulling, and more time growing their businesses.",
   ],
 };
 
@@ -390,6 +400,46 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/**TEAM DETAILS */}
+      <section id="clean-bean-team" className=" py-16 sm:py-24 bg-secondary">
+       
+        <ScrollReveal className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
+          <ImageZoom className="w-full">
+            <div className="relative aspect-[4/3] w-full">
+              <Image
+                src={teamImg}
+                alt="The Clean Bean team"
+                fill
+                sizes="(min-width: 1024px) 600px, 100vw"
+                className="object-cover object-top"
+              />
+            </div>
+          </ImageZoom>
+
+          <div className="min-w-0">
+            <h2 className="font-title text-4xl font-black leading-[1.1] tracking-tight text-[#172119] sm:text-5xl">
+              {teamDetails.title}
+            </h2>
+
+            <div
+              aria-hidden="true"
+              className="mt-5 h-1 w-12 rounded-full bg-brand-primary"
+            />
+
+            <div className="mt-7 space-y-5">
+              {teamDetails.paragraphs.map((paragraph) => (
+                <p
+                  key={paragraph}
+                  className="font-tip text-lg leading-9 text-gray-700"
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
         </ScrollReveal>
